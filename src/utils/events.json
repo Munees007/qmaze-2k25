@@ -1,0 +1,349 @@
+{
+    "events":{
+        "General":[
+            {
+                "eventName":"Registration",
+                "alias":"REGISTRATION",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/Registration.png",
+                "time":"08:30 AM to 09:45 AM",
+                "venue":"C Block Lobby",
+                "type":["General"]
+            },
+            {
+                "eventName":"Inauguration",
+                "alias":"INAUGURATION",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/Inaguration.png",
+                "time":"09:45 AM to 10:45 AM",
+                "venue":"Seminar Hall",
+                "type":["General"]
+            },
+            {
+                "eventName":"Refreshments",
+                "alias":"REFRESHMENTS",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/Refreshment.png",
+                "time":"10:45 AM to 11:00 AM",
+                "venue":"C Block Lobby",
+                "type":["General"]
+            },
+            {
+                "eventName":"Lunch",
+                "alias":"LUNCH",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/Lunch.png",
+                "time":"12:45 PM to 01:45 PM",
+                "venue":"Auditorium",
+                "type":["General"]
+            },
+            {
+                "eventName":"STAR of QMaze",
+                "alias":"STAR OF QMAZE",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/star_of_qmaze.png",
+                "time":"02:45 PM to 03:45 PM",
+                "venue":"Auditorium",
+                "rules":[
+                    "Participants will be selected based on their performance (Top five colleges).",
+                    "Tasks will be given on the stage."
+                ],
+                "type":["General"]
+            },
+            {
+                "eventName":"Refreshments",
+                "alias":"REFRESHMENTS",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/Refreshment.png",
+                "time":"03:45 PM to 04:00 PM",
+                "venue":"Auditorium",
+                "type":["General"]
+            },
+            {
+                "eventName":"Prize Distribution",
+                "alias":"PRIZE DISTRIBUTION",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/prize-distribution.png",
+                "time":"04:00 PM to 04:30 PM",
+                "venue":"Auditorium",
+                "type":["General"]
+            }
+        ],
+        "ugEvents":[
+            {
+                "eventName":"Word Hunt Prelims",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/word_hunt.png",
+                "alias":"QUIZ",
+                "time":"11:00 AM to 11:15 AM",
+                "venue":"PG Lab",
+                "type":["UG"],
+                "rules":[
+                    "Two members per team.",
+                    "Prelims will be conducted.",
+                    "Quiz Finals will be on the stage.",
+                    "Duration is One Hour."
+                ]  
+            },
+            {
+                "eventName":"Word Hunt Final",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/word_hunt.png",
+                "alias":"QUIZ",
+                "time":"11:30 AM to 12:30 PM",
+                "venue":"Conference Hall",
+                "type":["UG"],
+                "rules":[
+                    "Two members per team.",
+                    "Prelims will be conducted.",
+                    "Quiz Finals will be on the stage.",
+                    "Duration is One Hour."
+                ]  
+            },
+            {
+                "eventName":"Crazy Frazy",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/software_marketing.png",
+                "alias":"SOFTWARE MARKETING",
+                "time":"11:00 AM to 12:30 PM",
+                "venue":"Auditorium",
+                "type":["UG"],
+                "rules":[
+                    "Three Members per team.",
+                    "Prelims will be conducted.",
+                    "Theme will be given half an hour prior to the event.",
+                    "Five Minutes for Advertising and Two Minutes for Queries.",
+                    "Don’t use any Electronic Devices.",
+                    "Don’t use any Vulgar or offensive words."
+                ]  
+            },
+            {
+                "eventName":"Spider Art",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/web_designing.png",
+                "alias":"WEB DESIGNING",
+                "time":"11:30 AM to 12:30 PM",
+                "venue":"PG Lab",
+                "type":["UG"],
+                "rules":[
+                    "Two members per team.",
+                    "Theme of designing will be provided on the spot",
+                    "Theme of designing will be provided on the spot",
+                    "Duration is One Hour."
+                ]  
+            },
+            {
+                "eventName":"Blind World",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/black_code.png",
+                "alias":"BLACK CODE",
+                "time":"01:45 PM to 02:45 PM",
+                "venue":"PG Lab",
+                "type":["UG"],
+                "rules":[
+                    "Only one participant is allowed from UG",
+                    "Duration of the event is One Hour",
+                    "Three Programs will be given on spot",
+                    "C language can be used for typing",
+                    "No Monitor/Display will be in switched ON mode, the participant has to type the program using keyboard only",
+                    "No Discussion or Any malpractice found, the participant will be disqualified"
+                ]  
+            }
+        ],
+        "pgEvents":[
+            {
+                "eventName":"Word Hunt Prelims",
+                "alias":"QUIZ",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/word_hunt.png",
+                "time":"11:00 AM to 11:15 AM",
+                "venue":"PG Lab",
+                "type":["PG"],
+                "rules":[
+                    "Two members per team.",
+                    "Prelims will be conducted.",
+                    "Quiz Finals will be on the stage.",
+                    "Duration is One Hour."
+                ]
+            },
+            {
+                "eventName":"Word Hunt Final",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/word_hunt.png",
+                "alias":"QUIZ",
+                "time":"11:30 AM to 12:30 PM",
+                "venue":"Seminar Hall",
+                "type":["PG"],
+                "rules":[
+                    "Two members per team.",
+                    "Prelims will be conducted.",
+                    "Quiz Finals will be on the stage.",
+                    "Duration is One Hour."
+                ]  
+            },
+            {
+                "eventName":"Mission Impossible",
+                "alias":"DEBUGGING",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/mission_impossible.png",
+                "time":"11:30 AM to 12:30 PM",
+                "venue":"PG Lab",
+                "type":["PG"],
+                "rules":[
+                    "Two members per team",
+                    "Task is based on C, C++, Java Language and will be provided on the spot",
+                    "Duration is One hour"
+                ]
+            },
+            {
+                "eventName":"Paper Legacy",
+                "alias":"PAPER PRESENTATION",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/paper_legacy.png",
+                "time":"11:00 AM to 12:30 PM",
+                "venue":"C18",
+                "type":["PG"],
+                "rules":[
+                    "Two members per team",
+                    "Paper should not exceed six pages",
+                    "Send your softcopies to qmaze@anjaconline.org on or before Feb 02, 2023.",
+                    "Selected papers will be informed on Feb 03, 2023",
+                    "Participants must bring their presentation",
+                    "Five minutes for presentation and three minutes for queries"
+                ],
+                "topics":[
+                    "Big Data Technologies",
+                    "Machine Learning",
+                    "Natural Language Processing",
+                    "Generate AI",
+                    "IOT",
+                    "Artificial Intelligence",
+                    "Virtual Reality & Argumented Reality",
+                    "Cyber Security",
+                    "Data Science",
+                    "5G Wireless Technology",
+                    "Robotics",
+                    "Blue Brain"
+                ]
+            },
+            {
+                "eventName":"SQL Master",
+                "alias":"SQL MASTER",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/sql_master.png",
+                "time":"01:45 PM to 02:45 PM",
+                "venue":"PG Lab",
+                "type":["PG"],
+                "rules":[
+                    "Only PG can participate.",
+                    "Prelims round will be conducted",
+                    "Two members per team",
+                    "SQL * Plus tool will be provided",
+                    "Duration is One hour"
+                ]
+            },
+            {
+                "eventName":"Treasure Hunt",
+                "alias":"TREASURE HUNT",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/tresure_hunt.png",
+                "time":"11:00 AM to 12:30 PM",
+                "venue":"Seminar Hall",
+                "type":["PG"],
+                "rules":[
+                    "Two members per teams",
+                    "Participants will have the checkpoints after each programming question",
+                    "The team which reaches the final checkpoint quickly,will be considered as a winning team.",
+                    "Programming language: C",
+                    "Duration is One hour"
+                ]
+            }
+        ],
+        "onlineEvents":[
+            {
+                "eventName":"Netmaze",
+                "alias":"NETMAZE",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/netmaze.png",
+                "time":"Before 12/12/2023",
+                "venue":"Online",
+                "type":["UG","PG"],
+                "rules":[
+                    "Both UG and PG can participate",
+                    "The College ID has to be used for login",
+                    "Netmaze event will open online on 30 January 2023",
+                    "For Playing Netmaze - https://qmaze.anjacmca.org/netmaze/play.php"
+                ]
+            },
+            {
+                "eventName":"Poster Making",
+                "alias":"POSTER MAKING",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/poster_making.png",
+                "time":"Before 12/12/2023",
+                "venue":"Online",
+                "type":["UG","PG"],
+                "rules":[
+                    "Both UG and PG can Participate",
+                    "Only One Participant is allowed from UG and PG",
+                    "Participants can select any one of the above themes and create an image for the choosen topic",
+                    "Uploaded images cannot be modified",
+                    "Image Should be submitted on or before 02.02.2023",
+                    "file extension:( .jpg) ( .jpeg ) ( .png)",
+                    "Likes hit on Poster making page will also be considered for evaluation",
+                    "Judges decision will be final",
+                    "Event will open on 26.01.2023 & will end on 07.02.2023",
+                    "Send your poster by Email : qmaze@anjaconline.org"
+                ],
+                "topics":[
+                    "Artificial Intelligence",
+                    "Industry 4.0",
+                    "Indian Education System"
+                ]
+            },
+            {
+                "eventName":"Memes Creation",
+                "alias":"MEMES CREATION",
+                "imgUrl":"https://ik.imagekit.io/23pca116/Assets/meme_creation.png",
+                "time":"Before 12/12/2023",
+                "venue":"Online",
+                "type":["UG","PG"],
+                "rules":[
+                    "Both UG & PG can participate",
+                    "Only one participant is allowed from UG & PG",
+                    "Event will be open on 26.01.2023 & will end on 07.02.2023",
+                    "File Extension: ( .jpg ) (.jpeg) (.png)",
+                    "Image should be submitted on or before 02.02.2023",
+                    "Any abusive content found will be strictly disqualified",
+                    "Send your Meme by E-mail: qmaze@anjaconline.org"
+                ],
+                "topics":[
+                    "Testing Vs Developer",
+                    "Real Life programmer Vs Reel Life programmer",
+                    "Work From Home Vs Office workers"
+                ]
+            }
+        ]
+    },
+    "contact":[
+        {
+            "designation":"DIRECTOR",
+            "name":"Dr.R.Lawrance",
+            "phoneNumber":"+919626295434",
+            "imgUrl":"https://anjaconline.irins.org/assets/profile_images/1752751.jpg"
+        },
+        {
+            "designation":"ASSISTANT PROFESSOR",
+            "name":"Dr.R.Vengatesh Kumar",
+            "phoneNumber":"+919626295434",
+            "imgUrl":"https://anjaconline.irins.org/assets/profile_images/124159.jpg"
+        },
+        {
+            "designation":"STUDENT CO-ORDINATOR",
+            "name":"Mr.S.Thareef Ahamed",
+            "phoneNumber":"+919626295434",
+            "imgUrl":"https://media.licdn.com/dms/image/D5603AQGtvbn67NNf3g/profile-displayphoto-shrink_400_400/0/1687946640695?e=1709769600&v=beta&t=Fe8RqSe8BjS4xOFzQ2lyV3DdlR3Mh4ylv4yCc8BPbKE"
+        }
+    ],
+    "generalRules":[
+        "One team per Department( BCA, B.Sc CS, B.Sc IT, MCA, M.Sc CS )",
+        "Separate prizes will be given for both U.G. and P.G.",
+        "Maximum 8 members per team.",
+        "Registration fee Rs.200/- per student (Registration should be online and payment to be paid on the spot (09.02.2023)",
+        "Participants must bring their College Identity card & Bonafide certificate",
+        "Time clashes are not encouraged",
+        "Rules will not be changed under any circumstances",
+        "Judges’ decision will be final",
+        "Strict discipline should be maintained",
+        "Tie-up will be resolved with additional questions",
+        "Mobile phone is not allowed during the events",
+        "Any clarifications will be cleared before the event commences",
+        "Confirm your participation through http://qmaze.anjacmca.org  on or Before  02th Feb 2023"
+    ],
+    "socialMediaLinks":{
+        "facebook":"https://www.facebook.com/QMAZEANJAC",
+        "youtube":"https://www.youtube.com/@qmaze_2k23",
+        "instagram":"https://www.instagram.com/qmaze_2k23/",
+        "mail":"mailto:qmaze@anjaconline.org"
+    }
+}

@@ -1,13 +1,50 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pointer{
+  cursor:  pointer !important;
+}
+.audiowave{
+  font-family: 'Audiowide', sans-serif !important;
+}
+.poppins{
+  font-family: 'Poppins', sans-serif !important;
+}
+.aqua{
+  color:#00F0FF !important;
+}
+.bg-aqua{
+  background-color: #00F0FF !important;
+}
+.cyan{
+  color: #072A51 !important;
+}
+.yellow{
+  color: yellow;
+}
+.navy{
+  color: navy !important;
+}
+.bg-navy{
+  background-color: navy !important;
+}
+.x-hidden{
+  overflow-x: hidden !important;
+}
+.ant-layout-sider-zero-width-trigger{
+  top: 12px !important;
+}
+.td-none{
+  text-decoration: none !important;
+}
+.ant-table{
+  overflow-x: auto !important;
+}
+.important-links{
+  color: yellow;
 }
