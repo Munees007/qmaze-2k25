@@ -11,6 +11,7 @@ import AdminDash from "../components/AdminDash";
 import ManageNetmazeQuestions from "../components/ManageNetmazeQuestions";
 import ManageNetmazeParticipants from "../components/ManageNetmazeParticipants";
 import NetmazeDashboard from '../components/NetmazeDashboard';
+import ErrorPage from '../pages/ErrorPage';
 import { fetchAdminData,logoutAdmin } from '../actions/adminActions';
 import {fetchData} from '../actions/generalActions';
 import { Helmet } from "react-helmet";
@@ -129,7 +130,8 @@ function AdminDashboard() {
                             <Route path="netmaze/manage-questions" element={<ManageNetmazeQuestions/>}/>
                             <Route path="netmaze/manage-participants" element={<ManageNetmazeParticipants/>}/>
                             <Route path="netmaze/dashboard" element={<NetmazeDashboard/>}/>
-                            <Route path="*" element={<h1>Error</h1>} />
+                            <Route path="*" element={<ErrorPage/>} />
+                            <Route path="netmaze/*" element={<ErrorPage/>} />
                         </Routes>
                     </Content>
                 </Layout>

@@ -25,6 +25,7 @@ function AdminEventWiseTeams() {
                     <Title level={3} className="fw-bold">PG EVENTS</Title>
                 </Col>
             {
+                Object.keys(pgEvents)?.length>0?
                 Object.keys(pgEvents)&&Object.keys(pgEvents).map((eventName,index)=>{
                     return(
                         <Col className="bg-white mt-4 rounded py-3 px-3 x-hidden" span={22} offset={1} key={index}>
@@ -41,6 +42,8 @@ function AdminEventWiseTeams() {
                         </Col>
                     )
                 })
+                :
+                ""
             }
             </Row>
             <Row className="mt-4 mb-5">
@@ -48,6 +51,7 @@ function AdminEventWiseTeams() {
                     <Title level={3} className="fw-bold">UG EVENTS</Title>
                 </Col>
             {
+                Object.keys(ugEvents)?.length>0?
                 Object.keys(ugEvents)&&Object.keys(ugEvents).map((eventName,index)=>{
                     return(
                         <Col className="bg-white mt-4 rounded py-3 px-3 x-hidden" span={22} offset={1} key={index}>
@@ -64,6 +68,8 @@ function AdminEventWiseTeams() {
                         </Col>
                     )
                 })
+                :
+                ""
             }
             </Row>
         </>

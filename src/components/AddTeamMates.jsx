@@ -101,11 +101,11 @@ function AddTeamMates() {
                     })
                 }
                 {
-                    teamMembers.length < 8 ?
+                    teamMembers.length < 12 ?
                         <Row>
                             <Col span={22} offset={1} className="d-flex justify-content-end my-3">
                                 <Button type="primary" onClick={() => {
-                                    if (teamMembers.length < 8) {
+                                    if (teamMembers.length < 12) {
                                         setTeamMembers([...teamMembers, memberTemplate])
                                     }
                                 }}>Add Member</Button>

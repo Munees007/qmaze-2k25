@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { generateAnswerKeyTable, generateNetmazeLeaderboard } from '../utils/utils';
 import { Typography, Row, Col } from 'antd'
 const { Title } = Typography;
 function NetmazeFinish({ result }) {
-    useEffect(() => {
-        console.log(result)
-    }, [])
     return (
         <>
             {

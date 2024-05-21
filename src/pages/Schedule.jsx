@@ -131,7 +131,6 @@ function Schedule() {
             if (value.eventType === "PG")
                 return value
         }))
-        console.log(overallEvents)
     }, [overallEvents])
     return (
         <div style={{ backgroundColor: "#000" }}>

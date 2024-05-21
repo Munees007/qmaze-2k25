@@ -68,12 +68,6 @@ function AdminSpotRegistration() {
         setCollegeNames(generalData?.data?.colleges.map((college) => { return college.collegeName }).sort())
         setDepartmemtName(generalData?.data?.departments.map((dept) => { return dept.deptName }))
     }, [generalData])
-    useEffect(() => {
-        console.log(teamData)
-    }, [teamData])
-    useEffect(() => {
-        console.log(eventMembers)
-    }, [eventMembers])
     const searchCollege = (text) => {
 
     }
@@ -137,7 +131,6 @@ function AdminSpotRegistration() {
                         value: item,
                     }))} showSearch size="large" title="College Name" value={teamData?.collegeName} onSelect={(value) => {
                         setTeamData({ ...teamData, collegeName: value })
-                        // console.log(value)
                     }}
                         dropdownRender={(menu) => (
                             <>
@@ -177,7 +170,6 @@ function AdminSpotRegistration() {
                         value: item,
                     }))} showSearch size="large" title="Department Name" value={teamData?.deptName} onSelect={(value) => {
                         setTeamData({ ...teamData, deptName: value })
-                        // console.log(value)
                     }}
                     />
                 </Col>
@@ -187,7 +179,6 @@ function AdminSpotRegistration() {
                         value: item,
                     }))} showSearch size="large" title="Department Type" value={teamData?.deptType} onSelect={(value) => {
                         setTeamData({ ...teamData, deptType: value })
-                        // console.log(value)
                     }}
                     />
                 </Col>
@@ -215,7 +206,6 @@ function AdminSpotRegistration() {
                         value: item,
                     }))} showSearch size="large" title="Payment Status" value={teamData?.paymentStatus} onSelect={(value) => {
                         setTeamData({ ...teamData, paymentStatus: value })
-                        // console.log(value)
                     }}
                     />
                 </Col>
@@ -259,11 +249,11 @@ function AdminSpotRegistration() {
                     })
                 }
                 {
-                    teamMembers.length < 8 ?
+                    teamMembers.length < 12 ?
                         <Row>
                             <Col span={22} offset={1} className="d-flex justify-content-end my-3">
                                 <Button type="primary" onClick={() => {
-                                    if (teamMembers.length < 8) {
+                                    if (teamMembers.length < 12) {
                                         setTeamMembers([...teamMembers, memberTemplate])
                                     }
                                 }}>Add Member</Button>

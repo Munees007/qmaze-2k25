@@ -7,12 +7,20 @@ import { RiTeamFill } from "react-icons/ri";
 const { Title, Text } = Typography;
 function ParticipantDash() {
     const teamData = useSelector((state) => state?.participant?.data?.teamData);
+    const data=useSelector((state)=>state?.general?.data?.general)
     return (
         <>
             <Row className="mt-5">
                 <Col span={22} offset={1} className="mt-3">
                     <Title level={4}>Dashboard</Title>
                     <Text type="secondary" strong>We are pleasure to welcomes you for Qmaze organized by Softech Association</Text>
+                </Col>
+            </Row>
+            <Row>
+                <Col className="mt-4" span={22} offset={1}>
+                    <button className="btn btn-primary btn-sm" onClick={()=>{
+                        window.open(data?.registrationManual,"_blank")
+                    }}>Click to see registration guide</button>
                 </Col>
             </Row>
             <Row className="mt-2">

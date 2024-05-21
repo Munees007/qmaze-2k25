@@ -87,12 +87,3 @@ export const getLotNumber=async()=>{
     const existTeams=await getDocs(query(collection(db,"teams")));
     return existTeams.docs.length+1
 }
-
-// export const handleNetmazeFlags=async(dispatch,data)=>{
-//     try{
-//         // const existTeams=await getDocs(query(collection(db,"general")));
-//         const ref=await updateDoc(existTeams.docs[0].ref,{isNetmazeStarts:data?.isNetmazeStarts,publishNetmazeAnswerKey:data?.publishNetmazeAnswerKey})
-//     }catch(err){
-//         console.log(err);
-//     }
-// }

@@ -6,7 +6,7 @@ import NetmazeFinish from '../components/NetmazeFinish';
 import NetmazePlay from '../components/NetmazePlay';
 import NetmazeLogin from '../components/NetmazeLogin';
 import { fetchData } from '../actions/generalActions';
-import { fetchNetmazeData, fetchNetmazeResult } from '../actions/netmazeActions';
+import { fetchNetmazeResult,fetchNetmazeData } from '../actions/netmazeActions';
 import { useSelector, useDispatch } from "react-redux";
 import { auth } from '../db';
 import { decryptData } from '../utils/utils';
@@ -26,13 +26,13 @@ function NetMaze() {
             fetchData(dispatch);
     }, [general])
     useEffect(() => {
-        if (!netmaze?.isLogin && netmaze?.questions == null)
-            fetchNetmazeData(user?.email, dispatch, messageApi)
+        if(!netmaze.isLogin&&netmaze.questions==null)
+            fetchNetmazeData(user,dispatch,messageApi)
         if (generalData?.publishNetmazeAnswerKey)
             fetchNetmazeResult(dispatch)
     }, [general,netmaze])
     return (
-        <>
+        <div id="netmaze-window">
             {ContextHolder}
             <Helmet>
                 <title>NetMaze | Qmaze</title>
@@ -64,7 +64,7 @@ function NetMaze() {
                         </Col>
                     </Row>
             }
-        </>
+        </div>
     )
 }
 export default NetMaze;

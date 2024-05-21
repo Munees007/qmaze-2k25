@@ -31,7 +31,7 @@ function ManageNetmazeParticipants() {
                 </Col>
                 <Form className="w-100" onSubmitCapture={(e) => {
                     e.preventDefault();
-                    addNetMazeParticipant(currentParticipants, dispatch, messageApi)
+                    addNetMazeParticipant({...currentParticipants,lastUpdatedOn:Date.now()}, dispatch, messageApi)
                     setCurrentParticipants({ lotNo: "", name: "", email: "", level: 1, isLogin: false, type: "", collegeName: "", currentAttempt: 0, totalAttempt: 0, score: 0 })
                 }}>
                     <Row>

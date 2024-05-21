@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3a1a9e43.css",
-    "main.js": "/static/js/main.f0858130.js",
+    "main.css": "/static/css/main.6d6e2e0e.css",
+    "main.js": "/static/js/main.94e9ed9a.js",
     "static/js/498.88d5f0f1.chunk.js": "/static/js/498.88d5f0f1.chunk.js",
     "static/js/703.af75ad6b.chunk.js": "/static/js/703.af75ad6b.chunk.js",
     "static/js/513.0b465fdb.chunk.js": "/static/js/513.0b465fdb.chunk.js",
@@ -14,20 +14,21 @@
     "static/media/g6.JPG": "/static/media/g6.d3ae3e18e2e934ebd8f6.JPG",
     "static/media/g5.JPG": "/static/media/g5.d96d3ddde40bb614c740.JPG",
     "static/media/qmazelogo.png": "/static/media/qmazelogo.97e8d30a862c93a5388f.png",
+    "static/media/header.jpg": "/static/media/header.217025565a0b7d5febfa.jpg",
     "static/media/money.png": "/static/media/money.3a69eeba2b87405dd191.png",
     "static/media/star-of-qmaze.png": "/static/media/star-of-qmaze.7f45f87c025a73309526.png",
     "static/media/venue-icon.png": "/static/media/venue-icon.e54cb654e87faa9bc959.png",
     "static/media/squares.svg": "/static/media/squares.0fc73c7e0b698b315722.svg",
     "index.html": "/index.html",
-    "main.3a1a9e43.css.map": "/static/css/main.3a1a9e43.css.map",
-    "main.f0858130.js.map": "/static/js/main.f0858130.js.map",
+    "main.6d6e2e0e.css.map": "/static/css/main.6d6e2e0e.css.map",
+    "main.94e9ed9a.js.map": "/static/js/main.94e9ed9a.js.map",
     "498.88d5f0f1.chunk.js.map": "/static/js/498.88d5f0f1.chunk.js.map",
     "703.af75ad6b.chunk.js.map": "/static/js/703.af75ad6b.chunk.js.map",
     "513.0b465fdb.chunk.js.map": "/static/js/513.0b465fdb.chunk.js.map",
     "787.59345a1d.chunk.js.map": "/static/js/787.59345a1d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a1a9e43.css",
-    "static/js/main.f0858130.js"
+    "static/css/main.6d6e2e0e.css",
+    "static/js/main.94e9ed9a.js"
   ]
 }

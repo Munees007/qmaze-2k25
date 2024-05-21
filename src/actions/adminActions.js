@@ -1,7 +1,7 @@
 import { db, auth } from '../db';
-import { setAdminDetails, updateNetmazeQuestions,updateNetmazeParticipants,setLogoutAdmin } from '../slices/AdminSlice';
+import { setAdminDetails, updateNetmazeQuestions, updateNetmazeParticipants, setLogoutAdmin } from '../slices/AdminSlice';
 import { collection, addDoc, getDocs, where, query, updateDoc, deleteDoc } from 'firebase/firestore';
-import { signInWithPopup, GoogleAuthProvider ,signOut} from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { forEach } from 'underscore';
 import { getLotNumber } from './generalActions';
 import { filterByEvent } from '../utils/utils';
@@ -10,7 +10,7 @@ export const handleAdminSignIn = async (dispatch, navigate, messageApi) => {
     try {
         const provider = new GoogleAuthProvider();
         const result = await signInWithPopup(auth, provider);
-        console.clear();
+        // console.clear();
         const { email } = result.user;
         fetchAdminData(email, dispatch, messageApi, navigate)
     } catch (err) {
@@ -22,21 +22,21 @@ export const fetchAdminData = async (email, dispatch, messageApi, navigate) => {
         const res = await getDocs(query(collection(db, "admins"), where("email", "==", email)))
         if (res.docs.length > 0) {
             const resultTeams = await getDocs(query(collection(db, "teams")));
-            let teams = [];
+            let teams = [], collegeWise = [], eventWise = [];
             getNetMazeQuestions(dispatch)
             getNetMazeParticipants(dispatch)
             if (resultTeams.docs.length > 0) {
                 forEach(resultTeams.docs, (team) => {
                     teams.push(team.data());
                 })
-                let collegeWise = _.groupBy(teams, (team) => {
+                collegeWise = _.groupBy(teams, (team) => {
                     return team.collegeName
                 })
-                let eventWise = filterByEvent(teams);
+                eventWise = filterByEvent(teams);
                 collegeWise = Object.fromEntries(Object.entries(collegeWise).sort())
-                dispatch(setAdminDetails({ teams, collegeWise, eventWise }))
-                navigate('/admin/dashboard')
             }
+            dispatch(setAdminDetails({ teams, collegeWise, eventWise }))
+            navigate('/admin/dashboard')
         } else {
             messageApi.open({
                 type: "error",
@@ -107,43 +107,43 @@ export const getNetMazeQuestions = async (dispatch) => {
                 if (question.data().type == "ALUMNI")
                     alumniQues.push(question.data())
             })
-            dispatch(updateNetmazeQuestions({ugQuestions:ugQues,pgQuestions:pgQues,alumniQuestions:alumniQues}))
+            dispatch(updateNetmazeQuestions({ ugQuestions: ugQues, pgQuestions: pgQues, alumniQuestions: alumniQues }))
         }
     } catch (err) {
         console.log(err)
     }
 }
-export const addNetMazeQuestion=async(data,dispatch,messageApi)=>{
-    try{
-        const docRef=await addDoc(collection(db,"netmazeQuestions"),data)
+export const addNetMazeQuestion = async (data, dispatch, messageApi) => {
+    try {
+        const docRef = await addDoc(collection(db, "netmazeQuestions"), data)
         messageApi.open({
-            type:"success",
-            content:"Question added"
+            type: "success",
+            content: "Question added"
         })
         getNetMazeQuestions(dispatch)
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-export const deleteNetMazeQuestions=async(data,dispatch,messageApi)=>{
-    try{
-        const docRef = await getDocs(query(collection(db, "netmazeQuestions"), where("levelNumber", "==", data.levelNumber),where("type","==",data.type)))
-        const ref=await deleteDoc(docRef.docs[0].ref)
+export const deleteNetMazeQuestions = async (data, dispatch, messageApi) => {
+    try {
+        const docRef = await getDocs(query(collection(db, "netmazeQuestions"), where("levelNumber", "==", data.levelNumber), where("type", "==", data.type)))
+        const ref = await deleteDoc(docRef.docs[0].ref)
         messageApi.open({
-            type:"success",
-            content:"Question Deleted"
+            type: "success",
+            content: "Question Deleted"
         })
         getNetMazeQuestions(dispatch);
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-export const getNetMazeParticipants= async (dispatch) => {
+export const getNetMazeParticipants = async (dispatch) => {
     try {
         const res = await getDocs(query(collection(db, "netmazeParticipants")));
-        let participants=[]
+        let participants = []
         if (res.docs.length > 0) {
             forEach(res.docs, (participant) => {
                 participants.push(participant.data())
@@ -155,29 +155,28 @@ export const getNetMazeParticipants= async (dispatch) => {
     }
 }
 
-export const addNetMazeParticipant=async(data,dispatch,messageApi)=>{
-    try{
-        const docRef=await addDoc(collection(db,"netmazeParticipants"),data)
+export const addNetMazeParticipant = async (data, dispatch, messageApi) => {
+    try {
+        const docRef = await addDoc(collection(db, "netmazeParticipants"), data)
         messageApi.open({
-            type:"success",
-            content:"Participant added"
+            type: "success",
+            content: "Participant added"
         })
         getNetMazeParticipants(dispatch)
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
-export const deleteNetMazeParticipants=async(data,dispatch,messageApi)=>{
-    try{
-        console.log(data)
+export const deleteNetMazeParticipants = async (data, dispatch, messageApi) => {
+    try {
         const docRef = await getDocs(query(collection(db, "netmazeParticipants"), where("lotNo", "==", data)))
-        const ref=await deleteDoc(docRef.docs[0].ref)
+        const ref = await deleteDoc(docRef.docs[0].ref)
         messageApi.open({
-            type:"success",
-            content:"Participant Deleted"
+            type: "success",
+            content: "Participant Deleted"
         })
         getNetMazeParticipants(dispatch);
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
@@ -186,8 +185,8 @@ export const logoutAdmin = async (dispatch, navigate, messageApi) => {
     signOut(auth).then(() => {
         dispatch(setLogoutAdmin())
         messageApi.open({
-            type:"success",
-            content:"Logout Successfully"
+            type: "success",
+            content: "Logout Successfully"
         })
         navigate('/admin')
     }).catch((error) => {

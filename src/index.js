@@ -8,6 +8,7 @@ import ParticipantDashboard from './pages/ParticipantDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 import NetMaze from './pages/NetMaze';
+import ErrorPage from './pages/ErrorPage';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -45,10 +46,16 @@ const router = createBrowserRouter([
     path:'/netmaze',
     element:<NetMaze/>
   },
+  {
+    path:'/*',
+    element:<ErrorPage/>
+  }
 ])
 AOS.init({
   once: true
 })
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>

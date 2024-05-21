@@ -23,7 +23,7 @@ export const handleNetmazeLogin = async (dispatch, messageApi) => {
                 return 0
             }
             else {
-                fetchNetmazeData(email, dispatch, messageApi)
+                fetchNetmazeData(result.user,dispatch,messageApi)
             }
         } else {
             messageApi.open({
@@ -35,9 +35,10 @@ export const handleNetmazeLogin = async (dispatch, messageApi) => {
         console.log(err)
     }
 }
-export const fetchNetmazeData = async (email, dispatch, messageApi) => {
-    try {
-        const res = await getDocs(query(collection(db, "netmazeParticipants"), where("email", "==", email)))
+
+export const fetchNetmazeData=async(user,dispatch,messageApi)=>{
+    try{
+        const res = await getDocs(query(collection(db, "netmazeParticipants"), where("email", "==",user.email)))
         if (res.docs.length > 0) {
             let resultData = res.docs[0].data();
             if (!resultData?.isLogin) {
@@ -55,19 +56,19 @@ export const fetchNetmazeData = async (email, dispatch, messageApi) => {
             dispatch(setNetmazeQuestionData(encryptData(questions)))
             dispatch(setNetmazeUserData(encryptData(resultData)))
             dispatch(setCurrentQuestion(encryptData(currentQuestion)))
-        } else {
+        }
+        else {
             messageApi.open({
                 type: "error",
                 content: "Access Denied"
             })
         }
-    } catch (err) {
-
+    }catch(err){
+        console.log(err)
     }
 }
 
 export const revealClue = async (data, dispatch, messageApi) => {
-    console.log(data)
     try {
         const res = await getDocs(query(collection(db, "netmazeParticipants"), where("email", "==", data?.email), where("lotNo", "==", data?.lotNo)));
         const ref = await updateDoc(res.docs[0].ref, data)
@@ -103,7 +104,7 @@ export const levelUpgrade = async (dispatch, messageApi) => {
             currentScore = 8;
         else
             currentScore = 5;
-        userData = { ...userData, level: userData?.level + 1, totalAttempt: userData?.totalAttempt + userData?.currentAttempt, score: userData?.score + currentScore, currentAttempt: 0 }
+        userData = { ...userData, level: userData?.level + 1, totalAttempt: userData?.totalAttempt + userData?.currentAttempt, score: userData?.score + currentScore, currentAttempt: 0,lastUpdatedOn:Date.now() }
         const res = await getDocs(query(collection(db, "netmazeParticipants"), where("email", "==", userData?.email), where("lotNo", "==", userData?.lotNo)));
         const ref = await updateDoc(res.docs[0].ref, userData)
         let ques = decryptData(store.getState().netmaze.questions);
@@ -144,9 +145,9 @@ export const fetchNetmazeResult = async (dispatch) => {
                     ap.push(ques.data())
             });
         }
-        let questions={ug:ugq,pg:pgq,alumni:aq}
-        let participants={ug:ugp,pg:pgp,alumni:ap}
-        dispatch(setAnswerKey({questions,participants}))
+        let questions = { ug: ugq, pg: pgq, alumni: aq }
+        let participants = { ug: ugp, pg: pgp, alumni: ap }
+        dispatch(setAnswerKey({ questions, participants }))
     } catch (err) {
         console.log(err)
     }
@@ -156,7 +157,7 @@ export const logoutNetmazeParticipants = async (email, dispatch, messageApi) => 
     try {
         signOut(auth).then(async () => {
             const res = await getDocs(query(collection(db, "netmazeParticipants"), where("email", "==", email)))
-            const ref = await updateDoc(res.docs[0].ref, { isLogin: false })
+            const ref = await updateDoc(res.docs[0].ref, { isLogin: false})
             messageApi.open({
                 type: "success",
                 content: "Logout successfully"

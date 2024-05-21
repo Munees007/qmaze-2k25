@@ -5,13 +5,14 @@ import { HiMenu } from "react-icons/hi";
 import '../styles/homenavbar.css';
 import { Modal } from "antd";
 import Fade from 'react-reveal/Fade';
+import {useSelector} from 'react-redux'
 import { useNavigate } from "react-router-dom";
-import data from '../utils/events.json';
 function HomeNavBar({setActiveBtn}) {
     const navigate=useNavigate()
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
     const[eventSubMenu,setEventSubMenu]=useState(false);
     const[modal,setModal]=useState(false);
+    const data=useSelector((state)=>state?.general?.data?.general)
     return (
         <>
             <Fade top>
