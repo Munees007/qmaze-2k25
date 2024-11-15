@@ -4,9 +4,9 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { HiMenu } from "react-icons/hi";
 import '../styles/homenavbar.css';
 import { Modal } from "antd";
-import Fade from 'react-reveal/Fade';
 import {useSelector} from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import {motion} from "framer-motion";
 function HomeNavBar({setActiveBtn}) {
     const navigate=useNavigate()
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -15,8 +15,18 @@ function HomeNavBar({setActiveBtn}) {
     const data=useSelector((state)=>state?.general?.data?.general)
     return (
         <>
-            <Fade top>
-            <header className="w-100 d-flex justify-content-center home-header" onMouseLeave={()=>{setEventSubMenu(false)}}>
+            <motion.header 
+            
+                initial={{
+                    opacity:0
+                }}
+                animate={{
+                    opacity:1
+                }}
+                transition={{
+                    duration:1
+                }}
+                className="w-100 d-flex justify-content-center home-header" onMouseLeave={()=>{setEventSubMenu(false)}}>
                 <nav className="d-flex justify-content-center align-items-center">
                     <a href="#home">HOME</a>
                     <a href="#events">
@@ -36,8 +46,7 @@ function HomeNavBar({setActiveBtn}) {
                     <a href="#contactus">CONTACT</a>
                     <HiMenu className="fs-1 home-mobile-menu-btn pointer" style={{ color: "#34B3F1" }} onClick={() => { setOpenMobileMenu(true) }} />
                 </nav>
-            </header>
-            </Fade>
+            </motion.header>
             <div className="home-mobile-menu-container flex-column justify-content-center align-items-center" style={{ visibility: `${openMobileMenu && (window.innerWidth < 1023) ? "visible" : "hidden"}` }}>
                 <IoCloseCircleOutline className="home-mobile-close-btn pointer" style={{ color: "#34B3F1", fontSize: "48px" }} onClick={() => {
                     setOpenMobileMenu(false)
