@@ -27,7 +27,8 @@ function Home() {
     return (
         <>
             <Helmet>
-                <meta name="theme-color" content="#000" />
+                <title>QMAZE 2K25</title>
+                <meta name="theme-color" content="#000"/>
             </Helmet>
             {
                 !generalData?.result ?

@@ -65,6 +65,7 @@ export const fetchNetmazeData=async(user,dispatch,messageApi)=>{
         }
     }catch(err){
         console.log(err)
+        
     }
 }
 

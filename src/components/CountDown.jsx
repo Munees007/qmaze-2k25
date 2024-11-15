@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 import date from 'date-and-time';
 function CountDown() {
     // eslint-disable-next-line
-    const [day, setDay] = useState(date.subtract(new Date("2024-2-27"), new Date()).toDays());
+    const [day, setDay] = useState(date.subtract(new Date("2025-2-27"), new Date()).toDays());
     return (
         <Row className="countdown-section pb-5 pt-3">
             <Col span={24}>
@@ -28,9 +28,9 @@ function CountDown() {
                             <h1 className="audiowave aqua">EVENT LIVE NOW</h1>
                     }
                 </div>
-                <h1 className="countdown-qmaze-title mt-4">QMAZE 2K24</h1>
+                <h1 className="countdown-qmaze-title mt-4">QMAZE 2K25</h1>
                 <p className="my-4 yellow poppins fw-bold text-center fs-5">AYYA NADAR JANAKI AMMAL COLLEGE</p>
-                <p className="countdown-date mt-2">27-02-2024</p>
+                <p className="countdown-date mt-2">??-0?-2025</p>
             </Col>
         </Row>
     )

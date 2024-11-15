@@ -21,7 +21,7 @@ function HomeNavBar({setActiveBtn}) {
                     <a href="#home">HOME</a>
                     <a href="#events">
                         <span onClick={()=>{setActiveBtn(1)}}>EVENTS</span>
-                        <FaAngleDown className="ms-2 p-relative" onMouseEnter={()=>{setEventSubMenu(true)}}/>
+                        {eventSubMenu && <FaAngleDown className="ms-2 p-relative" onMouseEnter={()=>{setEventSubMenu(true)}}/>}
                         <div className="home-events-submenu" style={{visibility:`${eventSubMenu?"visible":"hidden"}`}}>
                             <a href="#events" onClick={()=>{setActiveBtn(2)}}>UG EVENTS</a>
                             <a href="#events" onClick={()=>{setActiveBtn(3)}}>PG EVENTS</a>

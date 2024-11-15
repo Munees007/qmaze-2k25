@@ -6,15 +6,26 @@ import {getAuth} from 'firebase/auth';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: process.env.REACT_APP_DB_APIKEY,
+//   authDomain: process.env.REACT_APP_DB_AUTHDOMAIN,
+//   databaseURL: process.env.REACT_APP_DB_DATABASE_URL,
+//   projectId: process.env.REACT_APP_DB_PROJECTID,
+//   storageBucket: process.env.REACT_APP_DB_STORAGE_BUCKET,
+//   messagingSenderId: process.env.REACT_APP_DB_MESSAGING_SENDERID,
+//   appId: process.env.REACT_APP_DB_APPID
+// };
+
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_DB_APIKEY,
-  authDomain: process.env.REACT_APP_DB_AUTHDOMAIN,
-  databaseURL: process.env.REACT_APP_DB_DATABASE_URL,
-  projectId: process.env.REACT_APP_DB_PROJECTID,
-  storageBucket: process.env.REACT_APP_DB_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_DB_MESSAGING_SENDERID,
-  appId: process.env.REACT_APP_DB_APPID
+  apiKey: "AIzaSyC_fX8RqveHNV16Vw_9aymEY-A320jQRho",
+  authDomain: "qmaze-aaef6.firebaseapp.com",
+  databaseURL: "https://qmaze-aaef6-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "qmaze-aaef6",
+  storageBucket: "qmaze-aaef6.appspot.com",
+  messagingSenderId: "67259567635",
+  appId: "1:67259567635:web:d12fec2634f7d2072db9e6"
 };
+
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);

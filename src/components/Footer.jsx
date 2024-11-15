@@ -14,7 +14,7 @@ function Footer() {
                 <Row className="d-flex align-items-center">
                     <Col className="d-flex flex-column align-items-center footer-col" xs={{ span: 20, offset: 2 }} sm={{ span: 20, offset: 2 }} md={{ span: 20, offset: 2 }} lg={{ span: 8, offset: 0 }} xl={{ span: 8, offset: 0 }}>
                         <img className="qmaze-logo" src={logo} alt="qmaze" style={{ transform: "translateY(0px)" }} />
-                        <h3 className="yellow audiowave" style={{ transform: "translateY(-32px)" }}>QMAZE 2K24</h3>
+                        <h3 className="yellow audiowave" style={{ transform: "translateY(-32px)" }}>QMAZE 2K25</h3>
                     </Col>
                     <Col className="d-flex flex-column footer-col" xs={{ span: 20, offset: 2 }} sm={{ span: 20, offset: 2 }} md={{ span: 20, offset: 2 }} lg={{ span: 8, offset: 0 }} xl={{ span: 8, offset: 0 }}>
                         <h5 className="audiowave yellow my-3">VENUE</h5>
@@ -61,7 +61,7 @@ function Footer() {
         </Row>
         <Row>
             <Col span={20} offset={2} className="my-3">
-                <p className="text-center yellow poppins">© QMAZE 2K24 POWERED BY DEPT OF COMPUTER APPLICATIONS </p>
+                <p className="text-center yellow poppins">© QMAZE 2K25 POWERED BY DEPT OF COMPUTER APPLICATIONS </p>
             </Col>
         </Row>
         </>

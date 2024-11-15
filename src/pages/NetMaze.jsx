@@ -26,10 +26,11 @@ function NetMaze() {
             fetchData(dispatch);
     }, [general])
     useEffect(() => {
-        if(!netmaze.isLogin&&netmaze.questions==null)
-            fetchNetmazeData(user,dispatch,messageApi)
-        if (generalData?.publishNetmazeAnswerKey)
-            fetchNetmazeResult(dispatch)
+        if(!netmaze.isLogin&&netmaze.questions==null){
+            fetchNetmazeData(user,dispatch,messageApi)}
+        if (generalData?.publishNetmazeAnswerKey){
+            fetchNetmazeResult(dispatch)}
+
     }, [general,netmaze])
     return (
         <div id="netmaze-window">

@@ -472,14 +472,14 @@ export const generateAnswerKeyTable = (data) => {
 
 export const encryptData = (data) => {
     if (data)
-        return cryptjs.AES.encrypt(JSON.stringify(data), process.env.REACT_APP_DB_NETMAZE_PRIVATE_KEY).toString();
+        return cryptjs.AES.encrypt(JSON.stringify(data), "4DD32B6F8C30C7DF4446CA096DF3FE4DB04DFE44F70AD8F8E87EF74A0C896EC7").toString();
     else
         return null
 }
-
+//process.env.REACT_APP_DB_NETMAZE_PRIVATE_KEY
 export const decryptData = (data) => {
     if (data) {
-        var bytes = cryptjs.AES.decrypt(data, process.env.REACT_APP_DB_NETMAZE_PRIVATE_KEY);
+        var bytes = cryptjs.AES.decrypt(data, "4DD32B6F8C30C7DF4446CA096DF3FE4DB04DFE44F70AD8F8E87EF74A0C896EC7");
         return JSON.parse(bytes.toString(cryptjs.enc.Utf8));
     }
     else

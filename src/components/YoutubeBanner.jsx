@@ -18,7 +18,7 @@ function YoutubeBanner({videoLink}) {
                         <img className="qmaze-logo" src={logo} alt="qmaze" style={{ transform: "translateY(16px)" }} />
                     </Col>
                     <Col className="d-flex justify-content-center align-items-center flex-column" xs={{ span: 22, offset: 1 }} sm={{ span: 22, offset: 1 }} md={{ span: 22, offset: 1 }} lg={{ span: 10 }} xl={{ span: 10 }}>
-                        <h1 className="aqua audiowave t-shadow-1">QMAZE 2K24</h1>
+                        <h1 className="aqua audiowave t-shadow-1">QMAZE 2K25</h1>
                         <h4 className="poppins fw-bold text-white mt-2">WATCH NOW</h4>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="72" viewBox="0 0 73 72" fill="none">

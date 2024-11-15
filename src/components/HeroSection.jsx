@@ -15,7 +15,7 @@ function HeroSection({ setActionBtn }) {
                         <img className="qmaze-logo" src={logo} alt="qmaze" style={{marginTop:"80px"}}/>
                     </Zoom>
                     <Bounce cascade delay={1000} duration={3000}>
-                        <h1>QMAZE - 2K24</h1>
+                        <h1>QMAZE - 2K25</h1>
                     </Bounce>
                     <Flip top delay={2000} duration={2000}>
                     <h2># CLASH OF WITS #</h2>

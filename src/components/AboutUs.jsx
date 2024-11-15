@@ -34,7 +34,7 @@ function AboutUs({brouchureLink}) {
                     </Carousel>
                 </Col>
                 <Col data-aos="fade-left" xs={{ span: 22, offset: 1 }} sm={{ span: 22, offset: 1 }} md={{ span: 10, offset: 2 }} lg={{ span: 10, offset: 2 }} xl={{ span: 10, offset: 2 }} className="mt-5 aboutus-right">
-                    <h3 className="my-3"># QMAZE 2K24</h3>
+                    <h3 className="my-3"># QMAZE 2K25</h3>
                     <p className="my-5 text-light">
                         Qmaze is a groundbreaking state level technical symposium conducted by the Department of Computer Applications from 2003. QMAZE and the word innovation are inseparable as the Letter Q represents innovation and Maze is a fascinating puzzle which encompasses intricate Competitions that takes place from morning to evening with Success as its ultimate solution.
                     </p>
